@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문화도시 전주</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background iframe {
+      width: 100vw;
+      height: 56.25vw; /* 16:9 비율 */
+      min-height: 100vh;
+      min-width: 177.77vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none; /* 클릭 안 되게 */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+
+    .title {
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-background">
+    <iframe 
+      src="https://www.youtube.com/embed/PFtDt0Sr9CE?autoplay=1&mute=1&loop=1&playlist=PFtDt0Sr9CE&controls=0&showinfo=0&modestbranding=1&rel=0"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
+</html>
