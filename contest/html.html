@@ -1,248 +1,64 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo.css" type="text/css"/>
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <style>
-      @import url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo.css');
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Thin.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Thin.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraLight.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraLight.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Light.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Light.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Regular.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Medium.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Medium.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Bold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Bold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraBold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-ExtraBold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Apple SD Gothic Neo';
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Black.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-Black.ttf') format('truetype');
-}
-      .iphone-pro {
-        background-color: #ffec1b;
+      body {
+        margin: 0;
+      }
+
+      .iphone {
+        background-color: #00b8ee;
         display: grid;
         justify-items: center;
         align-items: start;
         width: 100vw;
       }
 
-      .iphone-pro .overlap-group-wrapper {
-        background-color: #ffec1b;
-        aspect-ratio: 0.33;
+      .iphone .page-wrapper {
+        background-color: #00b8ee;
         width: 402px;
-        height: 1221px;
-      }
-
-      .iphone-pro .overlap-group {
+        height: auto;
         position: relative;
-        height: 575px;
       }
 
-      .iphone-pro .element {
-        position: absolute;
-        width: 368px;
-        height: 310px;
-        top: 32px;
-        left: 19px;
-        aspect-ratio: 1.19;
+      .iphone .page {
+        width: 100%;
+        height: auto;
         object-fit: cover;
       }
 
-      .iphone-pro .img {
+      .audio-player {
         position: absolute;
-        width: 148px;
-        height: 382px;
-        top: 0;
-        left: 254px;
-        aspect-ratio: 0.45;
-        object-fit: cover;
+        top: 497px; /* 원하는 위치 (px 권장) */
+        left: 50%;
+        transform: translateX(-50%) scale(0.5); /* 크기 줄이기 */
+        transform-origin: center;
+        z-index: 2;
+        width: 600px; /* 폭 조절 */
+        accent-color: #ff72ff;
       }
 
-      .iphone-pro .element-2 {
-        position: absolute;
-        width: 116px;
-        height: 245px;
-        top: 56px;
-        left: 0;
-        aspect-ratio: 0.73;
-        object-fit: cover;
-      }
-
-      .iphone-pro .element-3 {
-        position: absolute;
-        width: 210px;
-        height: 175px;
-        top: 270px;
-        left: 78px;
-        aspect-ratio: 1.2;
-        object-fit: cover;
-      }
-
-      .iphone-pro .rectangle {
-        width: 208px;
-        height: 59px;
-        top: 364px;
-        left: 32px;
-        position: absolute;
-        background-color: #ffffff;
-        border-radius: 4px;
-        border: 1px solid;
-        border-color: #000000;
-      }
-
-      .iphone-pro .div {
-        width: 338px;
-        height: 138px;
-        top: 437px;
-        left: 34px;
-        position: absolute;
-        background-color: #ffffff;
-        border-radius: 4px;
-        border: 1px solid;
-        border-color: #000000;
-      }
-
-      .iphone-pro .vector {
-        width: 208px;
-        top: 378px;
-        left: 32px;
-        position: absolute;
-        height: 1px;
-        object-fit: cover;
-      }
-
-      .iphone-pro .vector-2 {
-        width: 338px;
-        top: 452px;
-        left: 34px;
-        position: absolute;
-        height: 1px;
-        object-fit: cover;
-      }
-
-      .iphone-pro .ellipse {
-        top: 368px;
-        left: 38px;
-        position: absolute;
-        width: 7px;
-        height: 7px;
-        background-color: #2aff00;
-        border-radius: 3.5px;
-      }
-
-      .iphone-pro .ellipse-2 {
-        top: 441px;
-        left: 40px;
-        position: absolute;
-        width: 7px;
-        height: 7px;
-        background-color: #2aff00;
-        border-radius: 3.5px;
-      }
-
-      .iphone-pro .text-wrapper {
-        position: absolute;
-        top: 387px;
-        left: 42px;
-        font-family: 'Apple SD Gothic Neo';
-        font-weight: 400;
-        color: #000000;
-        font-size: 15px;
-        letter-spacing: 0;
-        line-height: normal;
-      }
-
-      .iphone-pro .text-wrapper-2 {
-        position: absolute;
-        top: 457px;
-        left: 101px;
-        font-family: 'Apple SD Gothic Neo';
-        font-weight: 800;
-        color: #000000;
-        font-size: 32px;
-        letter-spacing: 0;
-        line-height: normal;
+      /* 모바일 화면 */
+      @media (max-width: 768px) {
+        .iphone .page-wrapper {
+          width: 100vw;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="iphone-pro">
-      <div class="overlap-group-wrapper">
-        <div class="overlap-group">
-          <img class="element" src="img/6-1.png" />
-          <img class="img" src="img/2-1.png" />
-          <img class="element-2" src="img/7-1.png" />
-          <img class="element-3" src="img/3-1.png" />
-          <div class="rectangle"></div>
-          <div class="div"></div>
-          <img class="vector" src="img/vector-1.svg" />
-          <img class="vector-2" src="img/vector-2.svg" />
-          <div class="ellipse"></div>
-          <div class="ellipse-2"></div>
-          <p class="text-wrapper">AI 국악 크로스오버 작곡 공모전</p>
-          <div class="text-wrapper-2">온라인 청중평가</div>
-        </div>
+    <div class="iphone">
+      <div class="page-wrapper">
+        <img class="page"
+          src="https://hzvaan.github.io/palbok/contest/page.png"
+          alt="페이지 이미지"
+        />
+        <audio class="audio-player" controls controlslist="nodownload" preload="none">
+          <source src="https://hzvaan.github.io/palbok/yuhiyo-yoonseyeon.mp3" type="audio/mpeg">
+          브라우저가 오디오 태그를 지원하지 않습니다.
+        </audio>
       </div>
     </div>
   </body>
