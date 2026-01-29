@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미래문화도시 전주 - 미니멀 컬러 에디토리얼</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --color-pink: #EE93AD;
+            --color-orange: #ED762B;
+            --color-red: #E50012;
+            --color-black: #1A1A1A;
+            --color-bg: #F8F8F8;
+        }
+        body {
+            font-family: "Pretendard Variable", sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-black);
+            overflow-x: hidden;
+            word-break: keep-all;
+        }
+
+        /* 얇은 선 및 그리드 시스템 */
+        .line-v { width: 1px; background: rgba(26, 26, 26, 0.08); height: 100vh; position: fixed; top: 0; z-index: -1; }
+        .line-h { height: 1px; background: var(--color-black); width: 100%; opacity: 0.15; }
+
+        /* 타이포그래피 */
+        .hero-text {
+            font-size: clamp(2.5rem, 8vw, 8rem);
+            line-height: 0.85;
+            letter-spacing: -0.06em;
+            font-weight: 900;
+        }
+
+        /* 컬러 포인트 블록 */
+        .bg-point-pink { background-color: var(--color-pink); }
+        .bg-point-orange { background-color: var(--color-orange); }
+        .bg-point-red { background-color: var(--color-red); }
+
+        .text-point-pink { color: var(--color-pink); }
+        .text-point-orange { color: var(--color-orange); }
+        .text-point-red { color: var(--color-red); }
+
+        /* 인터랙션 */
+        .hover-lift { transition: transform 0.4s ease; }
+        .hover-lift:hover { transform: translateY(-10px); }
+
+        /* 로고 플레이스홀더 스타일 (업로드하신 파일 대응용) */
+        .logo-box { height: 40px; display: flex; align-items: center; }
+        .logo-box img { height: 100%; width: auto; object-fit: contain; }
+
+        /* 키비주얼 모티프를 활용한 미니멀 도형 */
+        .minimal-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <!-- 가이드 라인 배경 -->
+    <div class="line-v" style="left: 10%;"></div>
+    <div class="line-v" style="left: 30%;"></div>
+    <div class="line-v" style="left: 50%;"></div>
+    <div class="line-v" style="left: 70%;"></div>
+    <div class="line-v" style="left: 90%;"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 px-6 py-8 md:px-12">
+        <div class="max-w-screen-2xl mx-auto flex justify-between items-center">
+            <div class="logo-box">
+                <!-- 형님이 주신 가로형 로고 배치 섹션 -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+                        <div class="w-4 h-4 bg-white rounded-full"></div>
+                    </div>
+                    <span class="font-black text-xl tracking-tighter uppercase">미래문화도시 전주</span>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex gap-16 font-bold text-[12px] tracking-widest uppercase opacity-60">
+                <a href="#" class="hover:text-point-red transition-colors">Philosophy</a>
+                <a href="#" class="hover:text-point-orange transition-colors">Projects</a>
+                <a href="#" class="hover:text-point-pink transition-colors">Archive</a>
+                <a href="#" class="hover:opacity-100">Menu</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-48 pb-24 px-6 md:px-12">
+            <div class="max-w-screen-2xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-8">
+                        <div class="flex gap-2 mb-8">
+                            <span class="minimal-dot bg-point-red"></span>
+                            <span class="minimal-dot bg-point-orange"></span>
+                            <span class="minimal-dot bg-point-pink"></span>
+                        </div>
+                        <h2 class="hero-text uppercase mb-12">
+                            The Most<br>
+                            <span class="text-point-red italic">Korean</span><br>
+                            Future.
+                        </h2>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col justify-end pb-4">
+                        <!-- 세로형 타이포 로고 느낌의 텍스트 박스 -->
+                        <div class="border-l-2 border-black pl-6 py-2 mb-12">
+                            <h3 class="text-xl font-black leading-tight">가장 한국적인<br>미래문화도시, 전주</h3>
+                            <p class="text-xs font-medium mt-4 opacity-60 leading-relaxed">
+                                전통문화의 현대적 재해석을 통해<br>새로운 미래 문화 산업을 창출합니다.
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">↓</button>
+                            <button class="px-8 h-12 rounded-full bg-black text-white text-xs font-bold tracking-widest">CONNECT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Block Section (컬러 다양성 확보) -->
+        <section class="py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <!-- Pink Block -->
+                <div class="bg-point-pink p-12 min-h-[400px] flex flex-col justify-between hover:bg-black hover:text-white transition-colors cursor-pointer group">
+                    <span class="text-xs font-black border border-current px-3 py-1 rounded-full w-fit">01. ART</span>
+                    <div>
+                        <h4 class="text-4xl font-black mb-4 leading-none">미래문화<br>콘텐츠 거점</h4>
+                        <p class="text-sm font-medium opacity-80 group-hover:opacity-100">공간의 재탄생, 창작의 시작.</p>
+                    </div>
+                </div>
+                <!-- Orange Block -->
+                <div class="bg-point-orange p-12 min-h-[400px] flex flex-col justify-between hover:bg-black hover:text-white transition-colors cursor-pointer group">
+                    <span class="text-xs font-black border border-current px-3 py-1 rounded-full w-fit">02. TECH</span>
+                    <div>
+                        <h4 class="text-4xl font-black mb-4 leading-none">실감예술<br>산업화</h4>
+                        <p class="text-sm font-medium opacity-80 group-hover:opacity-100">전통에 신기술의 숨결을 더하다.</p>
+                    </div>
+                </div>
+                <!-- Red Block -->
+                <div class="bg-point-red p-12 min-h-[400px] flex flex-col justify-between text-white hover:bg-black transition-colors cursor-pointer group">
+                    <span class="text-xs font-black border border-white px-3 py-1 rounded-full w-fit">03. HUMAN</span>
+                    <div>
+                        <h4 class="text-4xl font-black mb-4 leading-none">글로벌<br>인재 육성</h4>
+                        <p class="text-sm font-medium opacity-80 group-hover:opacity-100">전주에서 세계로 뻗어가는 창작자.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo & Identity Section -->
+        <section class="py-32 px-6 md:px-12 bg-white">
+            <div class="max-w-screen-2xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-20">
+                    <div class="w-full md:w-1/2">
+                        <!-- 키비주얼의 원형 연결 모티프를 얇은 선으로 형상화 -->
+                        <div class="relative w-full aspect-square border border-black/10 rounded-full flex items-center justify-center">
+                            <div class="absolute inset-8 border border-point-red rounded-full opacity-30"></div>
+                            <div class="absolute inset-16 border border-point-orange rounded-full opacity-60"></div>
+                            <div class="absolute inset-24 border border-point-pink rounded-full"></div>
+                            <!-- 로고 타이포 배치 (중앙 강조) -->
+                            <div class="text-center z-10">
+                                <span class="block text-[10px] font-black tracking-[0.5em] mb-4 opacity-40">IDENTITY</span>
+                                <h3 class="text-4xl font-black leading-none italic">Future<br>Culture<br>Jeonju</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-5xl font-black mb-8">로컬리티가 곧<br>브랜드가 되는 도시</h3>
+                        <div class="line-h mb-10"></div>
+                        <div class="space-y-8">
+                            <div class="flex gap-6 items-start">
+                                <span class="text-point-red font-black text-xl italic">01</span>
+                                <p class="text-sm font-bold opacity-70 leading-relaxed">전통 X 기술 융합(Tech-heritage) 사업을 통해 전주만의 독보적인 콘텐츠 생태계를 구조화합니다.</p>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <span class="text-point-orange font-black text-xl italic">02</span>
+                                <p class="text-sm font-bold opacity-70 leading-relaxed">시민과 창작자가 함께 만드는 참여형 로컬 창작 플랫폼으로서, 모두가 즐기는 문화를 지향합니다.</p>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <span class="text-point-pink font-black text-xl italic">03</span>
+                                <p class="text-sm font-bold opacity-70 leading-relaxed">느린 미학과 전주다움을 유지하며 글로벌 감성을 결합한 프리미엄 도시 브랜드를 구축합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board Section -->
+        <section class="py-32 px-6 md:px-12">
+            <div class="max-w-screen-2xl mx-auto">
+                <div class="flex justify-between items-end mb-16">
+                    <h2 class="text-6xl font-black tracking-tighter italic">ARCHIVE</h2>
+                    <a href="#" class="text-xs font-black border-b border-black pb-1">VIEW ALL REPORTS</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 뉴스 카드 1 -->
+                    <div class="hover-lift cursor-pointer group">
+                        <div class="aspect-square bg-white border border-black/5 p-8 mb-6 flex flex-col justify-between group-hover:bg-point-red transition-colors">
+                            <span class="text-[10px] font-bold group-hover:text-white">NOTICE</span>
+                            <div class="w-12 h-12 bg-point-red rounded-full group-hover:bg-white"></div>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 group-hover:text-point-red transition-colors">2026 대한민국 문화도시 지정 공고</h5>
+                        <p class="text-[10px] font-black opacity-30 uppercase">2026.01.29</p>
+                    </div>
+                    <!-- 뉴스 카드 2 -->
+                    <div class="hover-lift cursor-pointer group">
+                        <div class="aspect-square bg-white border border-black/5 p-8 mb-6 flex flex-col justify-between group-hover:bg-point-orange transition-colors">
+                            <span class="text-[10px] font-bold group-hover:text-white">PRESS</span>
+                            <div class="w-12 h-12 bg-point-orange rounded-full group-hover:bg-white"></div>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 group-hover:text-point-orange transition-colors">전주미래문화재단 파트너십 체결 소식</h5>
+                        <p class="text-[10px] font-black opacity-30 uppercase">2026.01.20</p>
+                    </div>
+                    <!-- 뉴스 카드 3 -->
+                    <div class="hover-lift cursor-pointer group">
+                        <div class="aspect-square bg-white border border-black/5 p-8 mb-6 flex flex-col justify-between group-hover:bg-point-pink transition-colors">
+                            <span class="text-[10px] font-bold group-hover:text-white">EVENT</span>
+                            <div class="w-12 h-12 bg-point-pink rounded-full group-hover:bg-white"></div>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 group-hover:text-point-pink transition-colors">K-퓨처 콘텐츠 전시회 안내</h5>
+                        <p class="text-[10px] font-black opacity-30 uppercase">2026.01.15</p>
+                    </div>
+                    <!-- 로고가 강조된 인포 카드 -->
+                    <div class="aspect-square bg-black p-8 flex flex-col justify-center items-center text-center text-white rounded-3xl">
+                        <div class="w-16 h-16 bg-white rounded-full mb-6"></div>
+                        <p class="text-xs font-bold leading-relaxed">가장 한국적인 미래문화도시<br><span class="text-point-orange">전주</span>와 함께하세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-black/10 py-24 px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+                <div>
+                    <!-- 푸터에 로고 가로형 변형 배치 섹션 -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-6 h-6 rounded-full bg-point-red"></div>
+                        <span class="font-black text-2xl tracking-tighter">미래문화도시 전주</span>
+                    </div>
+                    <p class="text-xs font-bold text-gray-400 max-w-sm leading-relaxed">
+                        전통문화의 현대적 재해석을 통해<br>
+                        미래 문화산업을 창출하는 대한민국 문화도시 전주.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+                    <div>
+                        <h6 class="text-[10px] font-black uppercase tracking-widest mb-6 opacity-30">Quick Link</h6>
+                        <ul class="text-xs font-bold space-y-3">
+                            <li><a href="#" class="hover:text-point-red">Philosophy</a></li>
+                            <li><a href="#" class="hover:text-point-orange">Projects</a></li>
+                            <li><a href="#" class="hover:text-point-pink">Archive</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="text-[10px] font-black uppercase tracking-widest mb-6 opacity-30">Contact</h6>
+                        <ul class="text-xs font-bold space-y-3">
+                            <li>전주시 완산구 노송광장로 10</li>
+                            <li>063.000.0000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line-h mb-8"></div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <span class="text-[9px] font-black opacity-20 uppercase tracking-[0.3em]">© 2026 FUTURE CULTURE JEONJU. BE THE FUTURE, WITH TRADITION.</span>
+                <div class="flex gap-1">
+                    <div class="w-2 h-2 rounded-full bg-point-red"></div>
+                    <div class="w-2 h-2 rounded-full bg-point-orange"></div>
+                    <div class="w-2 h-2 rounded-full bg-point-pink"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
